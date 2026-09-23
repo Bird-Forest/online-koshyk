@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { nanoid } from "nanoid";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { scheme } from "@/constants/schemeProduct";
@@ -29,7 +30,8 @@ export default function CreateProduct() {
       onSubmit={handleSubmit(async (data) => {
         console.log("PRODUCT", data);
         const newProduct = {
-          id: crypto.randomUUID(),
+          // id: crypto.randomUUID(),
+          id: nanoid(8),
           category_id: data.category_id,
           name: data.name,
           currency_code: data.currency_code,
@@ -37,7 +39,7 @@ export default function CreateProduct() {
           unit_type: data.unit_type,
           picture: data.picture,
         };
-        console.log(newProduct);
+        // console.log(newProduct);
       })}
       className={styles.form}
     >

@@ -37,3 +37,6 @@
   letter-spacing: 1.25;
   color: #ff3d00;
 }
+.title > span {
+  font-style: italic;
+}

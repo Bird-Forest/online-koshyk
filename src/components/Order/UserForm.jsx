@@ -9,6 +9,7 @@ import InputText from "./InputText";
 import InputRadio from "./InputRadio";
 import Spinner from "../Helper/Spinner";
 import { useRouter } from "next/navigation";
+import { nanoid } from "nanoid";
 
 const messengers = [
   { id: 1, value: "Viber", bgClass: styles.viber },
@@ -28,7 +29,7 @@ export default function UserForm({ item, property }) {
   });
 
   // const colorProduct = item.select ? selectedColor : "";
-  // console.log(colorProduct);
+  // console.log("propertyForm", property);
   const parentId = item.category?.parent_id;
   const product = {
     category_id: parentId,
@@ -49,12 +50,15 @@ export default function UserForm({ item, property }) {
       onSubmit={handleSubmit(async (data) => {
         const order = {
           source_id: 1,
-          source_uuid: crypto.randomUUID(),
+          source_uuid: nanoid(8),
           buyer_comment: data.messenger,
           buyer: {
             full_name: `${data.name + " " + data.surname}`,
 
             phone: `${"+38" + data.phone}`,
+          },
+          marketing: {
+            utm_term: "landing page",
           },
           products: [product],
         };

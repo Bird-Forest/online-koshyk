@@ -7,7 +7,9 @@ export default function HeaderMain() {
   return (
     <header className={styles.headerMain}>
       <Image alt="logo" src={logo} className={styles.imgLogo} />
-      <p className={styles.title}>онлайн-кошик</p>
+      <p className={styles.title}>
+        <span>online</span>-кошик
+      </p>
     </header>
   );
 }
