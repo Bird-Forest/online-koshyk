@@ -45,8 +45,8 @@ export default function SampleFirst({ item }) {
       style={{ backgroundColor: `${item.primary}` }}
     >
       <BlockTag item={item} />
+      {item.image_2 && <BlockImg item={item} />}
       <BlockNotes item={item} />
-      {item.image_3 && <BlockImg item={item} />}
       {item.description.length > 0 && <BlockDescription item={item} />}
       {item.select.length > 0 && (
         <BlockSlides

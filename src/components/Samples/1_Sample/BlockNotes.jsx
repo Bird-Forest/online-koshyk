@@ -7,7 +7,7 @@ export default function BlockNotes({ item }) {
     <div className={styles.wrapNotes}>
       <Image
         alt={item.name}
-        src={item.image_2}
+        src={item.image_3}
         width={480}
         height={480}
         loading="eager"

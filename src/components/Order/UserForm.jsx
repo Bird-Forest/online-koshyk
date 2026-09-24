@@ -63,7 +63,7 @@ export default function UserForm({ item, property }) {
           products: [product],
         };
         console.log("USER", order);
-        router.push(`${item.slug}/thanks`);
+        router.replace(`${item.slug}/thanks`);
       })}
       id="order-form"
       className={styles.form}

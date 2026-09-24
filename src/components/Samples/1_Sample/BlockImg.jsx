@@ -7,7 +7,7 @@ export default function BlockImg({ item }) {
     <div className={styles.wrapImg}>
       <Image
         alt={item.name}
-        src={item.image_3}
+        src={item.image_2}
         width={480}
         height={480}
         loading="eager"

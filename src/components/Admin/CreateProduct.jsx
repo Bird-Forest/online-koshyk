@@ -39,7 +39,7 @@ export default function CreateProduct() {
           unit_type: data.unit_type,
           picture: data.picture,
         };
-        // console.log(newProduct);
+        console.log(newProduct);
       })}
       className={styles.form}
     >
