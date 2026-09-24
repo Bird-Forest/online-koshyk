@@ -1,7 +1,5 @@
 import styles from "../page.module.css";
 import React from "react";
-// import FirstTemplateCard from "@/components/Samples/FirstTemplateCard";
-// import SecondTemplateCard from "@/components/Samples/SecondTemplateCard";
 import { allProducts } from "@/data/products";
 import HeaderLanding from "@/components/Header/HeaderLanding";
 import NotFoundPage from "@/components/Helper/NotFoundPage";

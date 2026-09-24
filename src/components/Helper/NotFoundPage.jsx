@@ -9,7 +9,7 @@ export default function NotFoundPage() {
       <div className={styles.thankBox}>
         <Image
           src={notFound}
-          alt="Емодзі здивований, розгублений"
+          alt="Емодзі злий, розчарований"
           width={280}
           height={280}
           loading="eager"

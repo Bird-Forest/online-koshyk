@@ -149,9 +149,7 @@
   align-items: flex-start;
   gap: 8px;
 }
-/* .wrapDescript > p{
 
-} */
 .slidesBox {
   display: flex;
   flex-direction: column;
