@@ -8,7 +8,7 @@ export default function BlockPrice({ item }) {
         <h4 className={styles.noteTitle} style={{ color: `${item.secondary}` }}>
           Встигни придбати за ціною
         </h4>
-        <p className={styles.value}>{item.price_new}</p>
+        <p className={styles.value}>{item.price_new} грн</p>
       </div>
       <div className={styles.wrapCall} style={{ color: `${item.secondary}` }}>
         <span className={styles.icon}>{item.icon}</span>

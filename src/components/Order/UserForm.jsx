@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-// import { useState } from "react";
 import styles from "./order.module.css";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -19,7 +18,6 @@ const messengers = [
 
 export default function UserForm({ item, property }) {
   const router = useRouter();
-  // const id = crypto.randomUUID();
   const {
     register,
     handleSubmit,
@@ -28,14 +26,12 @@ export default function UserForm({ item, property }) {
     resolver: yupResolver(scheme),
   });
 
-  // const colorProduct = item.select ? selectedColor : "";
-  // console.log("propertyForm", property);
   const parentId = item.category?.parent_id;
   const product = {
     category_id: parentId,
     productId: item.id,
     name: item.name,
-    purchased_price: item.price_new,
+    price: item.price_new,
     quantity: 1,
     properties: [
       {
@@ -45,26 +41,45 @@ export default function UserForm({ item, property }) {
     ],
   };
 
+  const onSubmit = async (data) => {
+    // 1. Собираем объект заказа для KeyCRM
+    const orderPayload = {
+      source_id: 1,
+      source_uuid: nanoid(8),
+      buyer_comment: data.messenger,
+      buyer: {
+        full_name: `${data.name} ${data.surname}`.trim(),
+        phone: `+38${data.phone}`,
+      },
+      marketing: {
+        utm_term: "landing page",
+      },
+      products: [product],
+    };
+
+    try {
+      // 2. Вызываем наш Route Handler (/api/crm/route.js)
+      const response = await fetch("/api/crm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orderPayload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Ошибка при отправке");
+      }
+      // alert("Заказ успешно создан!");
+      router.replace(`${item.slug}/thanks`);
+    } catch (error) {
+      alert(`Не удалось отправить заказ: ${error.message}`);
+    }
+  };
+
   return (
     <form
-      onSubmit={handleSubmit(async (data) => {
-        const order = {
-          source_id: 1,
-          source_uuid: nanoid(8),
-          buyer_comment: data.messenger,
-          buyer: {
-            full_name: `${data.name + " " + data.surname}`,
-
-            phone: `${"+38" + data.phone}`,
-          },
-          marketing: {
-            utm_term: "landing page",
-          },
-          products: [product],
-        };
-        console.log("USER", order);
-        router.replace(`${item.slug}/thanks`);
-      })}
+      onSubmit={handleSubmit(onSubmit)}
       id="order-form"
       className={styles.form}
     >
@@ -95,8 +110,6 @@ export default function UserForm({ item, property }) {
       />
       <button
         type="submit"
-        // isSubmitting={isSubmitting}
-        // disabled={isSubmitting}
         className={styles.btnSubmit}
         style={{ color: `${item.primary}` }}
       >

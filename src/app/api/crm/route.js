@@ -1,57 +1,51 @@
 import { NextResponse } from "next/server";
-import { createCrmData, getCrmData, updateCrmData } from "@/lib/keycrm";
 
-// GET: Получение массива данных
-export async function GET(request) {
-  try {
-    const { searchParams } = new URL(request.url);
-    const limit = searchParams.get("limit") || "15";
-    const page = searchParams.get("page") || "1";
+const KEYCRM_API_URL = "https://openapi.keycrm.app/v1";
 
-    // Пример: получение карточек воронок (Pipelines Cards)
-    const data = await getCrmData("/pipelines/cards", { limit, page });
+/**
+ * Вспомогательная функция отправки запроса в KeyCRM
+ */
+async function sendToKeyCrm(endpoint, payload) {
+  const token = process.env.KEYCRM_API_KEY;
 
-    return NextResponse.json(data);
-  } catch (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  if (!token) {
+    throw new Error("KEYCRM_API_KEY не установлен в переменном окружения");
   }
+
+  const response = await fetch(`${KEYCRM_API_URL}${endpoint}`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || `KeyCRM Error: ${response.status}`);
+  }
+
+  return data;
 }
 
-// POST: Создание новой записи
+/**
+ * POST обработчик Next.js Route Handler
+ */
 export async function POST(request) {
   try {
-    const body = await request.json();
+    const orderPayload = await request.json();
 
-    // Пример создания карточки в KeyCRM
-    const newCard = await createCrmData("/pipelines/cards", body);
+    // Отправляем заказ на эндпоинт /order
+    const result = await sendToKeyCrm("/order", orderPayload);
 
-    return NextResponse.json(newCard, { status: 201 });
+    return NextResponse.json(result, { status: 201 });
   } catch (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
-  }
-}
-
-// PUT: Обновление записи
-export async function PUT(request) {
-  try {
-    const body = await request.json();
-    const { id, ...updateFields } = body;
-
-    if (!id) {
-      return NextResponse.json(
-        { error: "ID is required for update" },
-        { status: 400 },
-      );
-    }
-
-    // Пример обновления карточки по ID
-    const updatedCard = await updateCrmData(
-      `/pipelines/cards/${id}`,
-      updateFields,
+    return NextResponse.json(
+      { error: error.message || "Ошибка сервера" },
+      { status: 500 },
     );
-
-    return NextResponse.json(updatedCard);
-  } catch (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
