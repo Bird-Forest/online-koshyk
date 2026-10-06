@@ -12,7 +12,7 @@ export default function GoodsLists() {
           <Link href={`/${item.slug}`} className={styles.goodsItem}>
             <Image
               alt={item.name}
-              src={item.image_1}
+              src={item.image_tag}
               width={480}
               height={480}
               loading="eager"

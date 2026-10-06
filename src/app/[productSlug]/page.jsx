@@ -3,12 +3,13 @@ import React from "react";
 import { allProducts } from "@/data/products";
 import HeaderLanding from "@/components/Header/HeaderLanding";
 import NotFoundPage from "@/components/Helper/NotFoundPage";
-import SampleFirst from "@/components/Samples/1_Sample/SampleFirst";
+import SampleSecond from "@/components/Samples/SampleSecond";
+import SampleFirst from "@/components/Samples/SampleFirst";
 
-// const TEMPLATES = {
-//   1: FirstTemplateCard,
-//   2: SecondTemplateCard,
-// };
+const TEMPLATES = {
+  1: SampleFirst,
+  2: SampleSecond,
+};
 
 export default async function ProduktPage({ params }) {
   const { productSlug } = await params;
@@ -17,15 +18,15 @@ export default async function ProduktPage({ params }) {
   const product = allProducts.find((item) => item.slug === productSlug);
 
   // 2. Выбираем компонент шаблона по номеру (по умолчанию - 1)
-  // const TemplateComponent = TEMPLATES[product.template] || FirstTemplateCard;
+  const TemplateComponent = TEMPLATES[product.template] || SampleFirst;
 
   return (
     <>
       {product ? (
         <section className={styles.landing}>
           <HeaderLanding />
-          {/* <TemplateComponent item={product} /> */}
-          <SampleFirst item={product} />
+          <TemplateComponent item={product} />
+          {/* <SampleFirst item={product} /> */}
         </section>
       ) : (
         <NotFoundPage />

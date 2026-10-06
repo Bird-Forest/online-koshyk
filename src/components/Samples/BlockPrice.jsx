@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./1_samples.module.css";
+import styles from "./samples.module.css";
 
 export default function BlockPrice({ item }) {
   return (

@@ -1,15 +1,16 @@
 "use client";
 import React from "react";
-import styles from "./1_samples.module.css";
+import styles from "./samples.module.css";
 import { useState } from "react";
-import UserForm from "../../Order/UserForm";
+import UserForm from "../Order/UserForm";
 import BlockTag from "./BlockTag";
 import BlockNotes from "./BlockNotes";
 import BlockSlides from "./BlockSlides";
 import BlockPrice from "./BlockPrice";
 import BlockOrder from "./BlockOrder";
-import BlockImg from "./BlockImg";
 import BlockDescription from "./BlockDescription";
+import BlockImgArr from "./BlockImgArr";
+import BlockWarning from "./BlockWarning";
 
 export default function SampleFirst({ item }) {
   const [open, setOpen] = useState(false);
@@ -45,9 +46,10 @@ export default function SampleFirst({ item }) {
       style={{ backgroundColor: `${item.primary}` }}
     >
       <BlockTag item={item} />
-      {item.image_2 && <BlockImg item={item} />}
+      {item.image_arr.length > 0 && <BlockImgArr item={item} />}
       <BlockNotes item={item} />
       {item.description.length > 0 && <BlockDescription item={item} />}
+      {item.warning && <BlockWarning item={item} />}
       {item.select.length > 0 && (
         <BlockSlides
           item={item}
