@@ -1,10 +1,11 @@
 // import konstruktor1 from "../../public/konstruktor_1.webp";
 // import konstruktor2 from "../../public/konstruktor_2.webp";
 import { SlPresent } from "react-icons/sl";
-import { FaThumbsUp } from "react-icons/fa6";
+import { FaThumbsUp, FaCat } from "react-icons/fa6";
 import { BsHouseHeart } from "react-icons/bs";
 import { BsEmojiWink } from "react-icons/bs";
 import { MdChildCare } from "react-icons/md";
+import { BiSolidCat } from "react-icons/bi";
 
 export const allProducts = [
   {
@@ -468,6 +469,48 @@ export const allProducts = [
     image_notes: "/furniture/susharka-vertical-note.webp",
     warning: null,
     primary: "#093460",
+    secondary: "#ffffff",
+  },
+  {
+    id: "qI_wNXEB",
+    template: 1,
+    category: {
+      name: "Зоотовари",
+      parent_id: 3,
+    },
+    slug: "ryukzak-dlya-kotiv-s-cat-36-24-40",
+    name: "Рюкзак для котів (S-cat)",
+    price: "1100 грн",
+    price_new: 770,
+    discount: "30%",
+    icon: <FaCat />,
+    call: "КОТИК ОЦІНИТЬ!",
+    notes: [
+      {
+        idn: "t1",
+        text: "Для поїздок і відвідування ветеринара",
+      },
+    ],
+    description: [],
+    select: [
+      {
+        name: "Color",
+        value: "білий",
+        fill: "#ffffff",
+        img: "/pet/ryukzak-dlya-kotiv-w.webp",
+      },
+      {
+        name: "Color",
+        value: "чорний",
+        fill: "#000000",
+        img: "/pet/ryukzak-dlya-kotiv-b.webp",
+      },
+    ],
+    image_tag: "/pet/ryukzak-dlya-kotiv-tags.webp",
+    image_arr: [],
+    image_notes: "/pet/ryukzak-dlya-kotiv-note.webp",
+    warning: null,
+    primary: "#896a52",
     secondary: "#ffffff",
   },
 ];
