@@ -3,6 +3,10 @@ import styles from "./samples.module.css";
 import Image from "next/image";
 
 export default function BlockImgArr({ item }) {
+  const imageStyle = {
+    width: "100%",
+    height: "auto",
+  };
   const imgArr = item.image_arr;
   return (
     <ul className={styles.imgList}>

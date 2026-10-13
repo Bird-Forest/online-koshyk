@@ -11,6 +11,7 @@ import BlockOrder from "./BlockOrder";
 import BlockDescription from "./BlockDescription";
 import BlockImgArr from "./BlockImgArr";
 import BlockWarning from "./BlockWarning";
+import BlockDisccontImg from "./BlockDiscountImg";
 
 export default function SampleFirst({ item }) {
   const [open, setOpen] = useState(false);
@@ -46,9 +47,10 @@ export default function SampleFirst({ item }) {
       style={{ backgroundColor: `${item.primary}` }}
     >
       <BlockTag item={item} />
-      {item.image_arr.length > 0 && <BlockImgArr item={item} />}
       <BlockNotes item={item} />
+      {item.image_arr.length > 0 && <BlockImgArr item={item} />}
       {item.description.length > 0 && <BlockDescription item={item} />}
+      <BlockDisccontImg item={item} />
       {item.warning && <BlockWarning item={item} />}
       {item.select.length > 0 && (
         <BlockSlides

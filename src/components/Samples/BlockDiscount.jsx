@@ -7,7 +7,7 @@ export default function BlockDiscount({ item }) {
     <div className={styles.blockDiscont}>
       <TbShoppingBagDiscount />
       <p>ЗНИЖКА</p>
-      <p>{item.discount}</p>
+      <p>{`${item.discount}%`}</p>
     </div>
   );
 }

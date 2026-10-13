@@ -1,42 +1,24 @@
 import React from "react";
 import styles from "./samples.module.css";
-import Image from "next/image";
+import { BsCheckCircleFill } from "react-icons/bs";
 
 export default function BlockNotes({ item }) {
   return (
-    <div className={styles.wrapNotes}>
-      <Image
-        alt={item.name}
-        src={item.image_notes}
-        width={480}
-        height={480}
-        loading="eager"
-        className={styles.imgBasic}
-      />
-      <div className={styles.notes}>
-        <div className={styles.discount}>
-          <h3>ЗНИЖКА</h3>
-          <p>{item.discount}</p>
-        </div>
-        {item.notes.length > 0 && (
-          <ul className={styles.noteList}>
-            {item.notes.map((el) => (
-              <li
-                key={el.idn}
-                className={styles.wrapNote}
-                style={{ backgroundColor: `${item.primary}` }}
-              >
-                <p
-                  className={styles.note}
-                  style={{ color: `${item.secondary}` }}
-                >
-                  {el.text}
-                </p>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
+    <div className={styles.wrapDescript}>
+      {item.notes.length > 0 && (
+        <ul className={styles.noteList}>
+          {item.notes.map((el) => (
+            <li key={el.idn} className={styles.descript}>
+              <span className={styles.iconWrap}>
+                <BsCheckCircleFill className={styles.iconMark} />
+              </span>
+              <p className={styles.note} style={{ color: `${item.secondary}` }}>
+                {el.text}
+              </p>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

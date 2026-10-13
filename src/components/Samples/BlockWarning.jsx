@@ -5,8 +5,8 @@ import styles from "./samples.module.css";
 export default function BlockWarning({ item }) {
   return (
     <div className={styles.descript}>
-      <span className={styles.iconWarn}>
-        <FaExclamationCircle />
+      <span className={styles.iconWrap}>
+        <FaExclamationCircle className={styles.iconWarning} />
       </span>
       <p className={styles.note} style={{ color: `${item.secondary}` }}>
         {item.warning}

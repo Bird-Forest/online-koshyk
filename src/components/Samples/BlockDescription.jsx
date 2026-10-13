@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./samples.module.css";
-import { BsCheckCircleFill } from "react-icons/bs";
+import { BsFillHandThumbsUpFill } from "react-icons/bs";
 
 export default function BlockDescription({ item }) {
   return (
@@ -8,8 +8,8 @@ export default function BlockDescription({ item }) {
       <ul className={styles.noteList}>
         {item.description.map((el) => (
           <li key={el.idd} className={styles.descript}>
-            <span className={styles.iconMark}>
-              <BsCheckCircleFill />
+            <span className={styles.iconWrap}>
+              <BsFillHandThumbsUpFill className={styles.iconThumb} />
             </span>
             <p className={styles.note} style={{ color: `${item.secondary}` }}>
               {el.text}

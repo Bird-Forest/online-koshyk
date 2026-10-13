@@ -28,7 +28,7 @@
 }
 .boxPrice {
   right: 0;
-  bottom: 60px;
+  bottom: 140px;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -59,35 +59,28 @@
   width: 100%;
   height: auto;
 }
-.notes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  padding: 16px;
-}
 .discount {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
+  padding: 10px;
 }
 .discount > h3 {
   font-family: var(--font-montserrat);
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 800;
   letter-spacing: 1.25;
   font-style: italic;
   color: #ff2f00;
-  border-radius: 8px;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(7px);
-  padding: 4px;
+  padding: 10px 16px;
 }
 .discount > p {
   display: flex;
@@ -101,6 +94,7 @@
   height: 120px;
   color: #ff2f00;
   border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(7px);
 }
 .value {
@@ -118,6 +112,7 @@
   backdrop-filter: blur(7px);
   padding: 4px;
 }
+/* Sample 2 */
 .blockDiscont {
   display: flex;
   flex-direction: row;
@@ -160,24 +155,29 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 8px;
 }
 .noteTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: var(--font-open-sans);
+  text-align: center;
   font-size: 20px;
   font-weight: 600;
   font-style: italic;
   padding: 8px;
+}
+.noteTitle > svg {
+  width: 28px;
+  height: 28px;
+  fill: #ff2f00;
 }
 .note {
   font-family: var(--font-open-sans);
   font-size: 14px;
   font-weight: 600;
   font-style: italic;
-  padding: 8px;
-}
-.note > span {
-  color: #ff2f00;
+  padding: 0px 12px;
 }
 .wrapDescript {
   display: flex;
@@ -185,6 +185,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 8px;
+  padding: 16px 0px;
 }
 .descript {
   display: flex;
@@ -193,24 +194,24 @@
   padding: 4px;
   width: 100%;
 }
-.iconMark {
+.iconWrap {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.iconMark > svg {
-  width: 28px;
-  height: 28px;
+.iconMark {
+  width: 24px;
+  height: 24px;
   fill: #2ed020;
 }
-.iconWarn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.iconThumb {
+  width: 24px;
+  height: 24px;
+  fill: #ffc107;
 }
-.iconWarn > svg {
-  width: 28px;
-  height: 28px;
+.iconWarning {
+  width: 24px;
+  height: 24px;
   fill: #ffc107;
 }
 .slidesBox {
@@ -219,7 +220,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
-  padding: 20px 8px;
+  padding: 10px 8px 20px 8px;
 }
 .selectList {
   display: flex;
@@ -282,6 +283,14 @@
   text-align: center;
   letter-spacing: 1.25;
 }
+.wrapOrder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
 .btnOrder {
   display: flex;
   justify-content: center;
@@ -291,7 +300,7 @@
   height: 48px;
   background-color: white;
   font-family: var(--font-montserrat);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
   letter-spacing: 1.5;
@@ -301,6 +310,30 @@
 }
 .btnOrder:hover {
   transform: scale(1.05);
+}
+@media screen and (min-width: 420px) {
+  .btnOrder {
+    font-size: 24px;
+  }
+}
+.orderNotice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  font-family: var(--font-open-sans);
+  font-size: 14px;
+  font-weight: 600;
+  font-style: italic;
+}
+.orderNotice > span {
+  color: #ff2f00;
+}
+.orderNotice > svg {
+  width: 32px;
+  height: 32px;
+  stroke: #ff2f00;
 }
 .any {
   display: block;

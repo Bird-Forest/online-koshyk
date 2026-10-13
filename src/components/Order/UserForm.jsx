@@ -31,6 +31,8 @@ export default function UserForm({ item, property }) {
     category_id: parentId,
     productId: item.id,
     name: item.name,
+    purchased_price: item.purchased,
+    discount_percent: item.discount,
     price: item.price_new,
     quantity: 1,
     properties: [
