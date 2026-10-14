@@ -1,5 +1,3 @@
-// import konstruktor1 from "../../public/konstruktor_1.webp";
-// import konstruktor2 from "../../public/konstruktor_2.webp";
 import { SlPresent } from "react-icons/sl";
 import { FaThumbsUp, FaCat } from "react-icons/fa6";
 import { BsHouseHeart } from "react-icons/bs";
@@ -10,6 +8,7 @@ export const allProducts = [
   {
     id: "5vwnf7F8",
     template: 1,
+    variant: 1,
     category: {
       name: "Дитячі товари",
       parent_id: 1,
@@ -17,7 +16,7 @@ export const allProducts = [
     slug: "konstruktor-poezd-magnetic-82",
     name: "Магнітний конструктор-поїзд Magnetic 82 деталі",
     purchased: 100,
-    price: "1200 грн",
+    price: 1200,
     price_new: 900,
     discount: 25,
     icon: <SlPresent />,
@@ -44,6 +43,7 @@ export const allProducts = [
   {
     id: "o-RPXj87",
     template: 1,
+    variant: 1,
     category: {
       name: "Дитячі товари",
       parent_id: 1,
@@ -51,7 +51,7 @@ export const allProducts = [
     slug: "konstruktor-childrens-rail-car-mh2006-105",
     name: "Дитячий автотрек-паркінг Children's Rail Car MH2006",
     purchased: 100,
-    price: "1200 грн",
+    price: 1200,
     price_new: 720,
     discount: 40,
     icon: <SlPresent />,
@@ -78,6 +78,7 @@ export const allProducts = [
   {
     id: "9cB_jb7M",
     template: 2,
+    variant: 1,
     category: {
       name: "Дитячі товари",
       parent_id: 1,
@@ -85,7 +86,7 @@ export const allProducts = [
     slug: "interaktivnye-alfavit-tvarini-55sm-60knopok",
     name: "Інтерактивний Алфавіт. Тварини українською мовою, загадки, літери та цифри, кольори та форми 60 кнопок",
     purchased: 100,
-    price: "1000 грн",
+    price: 1000,
     price_new: 650,
     discount: 35,
     icon: <MdChildCare />,
@@ -120,6 +121,7 @@ export const allProducts = [
   {
     id: "pSnGZ8zC",
     template: 2,
+    variant: 1,
     category: {
       name: "Дитячі товари",
       parent_id: 1,
@@ -127,7 +129,7 @@ export const allProducts = [
     slug: "interaktivnye-ravlik-muz-art-14sm",
     name: "Інтерактивий драйвовий равлик з проєктором, музыкой та піснями на українській мові",
     purchased: 100,
-    price: "1000 грн",
+    price: 1000,
     price_new: 650,
     discount: 35,
     icon: <MdChildCare />,
@@ -161,6 +163,7 @@ export const allProducts = [
   {
     id: "DlQRY6tO",
     template: 1,
+    variant: 1,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -168,7 +171,7 @@ export const allProducts = [
     slug: "pristavnoj-stolik-na-kolesikax-kompyuternyj-g-50",
     name: "Приставний столик на коліщатках G-50",
     purchased: 100,
-    price: "1600 грн",
+    price: 1600,
     price_new: 960,
     discount: 40,
     icon: <FaThumbsUp />,
@@ -212,6 +215,7 @@ export const allProducts = [
   {
     id: "CZPs8m5E_1",
     template: 1,
+    variant: 1,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -219,7 +223,7 @@ export const allProducts = [
     slug: "pristavnoj-stolik-na-kolesikax-kompyuternyj-g-60-40",
     name: "Приставний столик на коліщатках G-60",
     purchased: 660,
-    price: "1920 грн",
+    price: 1920,
     price_new: 1152,
     discount: 40,
     icon: <FaThumbsUp />,
@@ -276,6 +280,7 @@ export const allProducts = [
   {
     id: "CZPs8m5E_2",
     template: 1,
+    variant: 2,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -283,7 +288,7 @@ export const allProducts = [
     slug: "pristavnoj-stolik-na-kolesikax-kompyuternyj-g-60-50",
     name: "Приставний столик на коліщатках G-60",
     purchased: 660,
-    price: "1920 грн",
+    price: 1920,
     price_new: 960,
     discount: 50,
     icon: <FaThumbsUp />,
@@ -340,6 +345,7 @@ export const allProducts = [
   {
     id: "YgjwE10v",
     template: 1,
+    variant: 1,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -347,7 +353,7 @@ export const allProducts = [
     slug: "dvojnaya-veshalka-dlya-odygu",
     name: "Підлогова вішалка-стійка для одягу",
     purchased: 100,
-    price: "1600 грн",
+    price: 1600,
     price_new: 960,
     discount: 40,
     icon: <BsHouseHeart />,
@@ -391,6 +397,7 @@ export const allProducts = [
   {
     id: "uxtmXmKn_1",
     template: 1,
+    variant: 1,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -398,8 +405,8 @@ export const allProducts = [
     slug: "veshalka-napolnaya-2-yashika-175x83x28-40",
     name: "Стійка-гардероб з 2 ящиками",
     purchased: 505,
-    price: "1600 грн",
-    price_new: 960,
+    price: 1800,
+    price_new: 1080,
     discount: 40,
     icon: <BsHouseHeart />,
     call: "ПОРЯДОК І СТИЛЬ!",
@@ -446,6 +453,7 @@ export const allProducts = [
   {
     id: "uxtmXmKn_2",
     template: 1,
+    variant: 2,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -453,7 +461,7 @@ export const allProducts = [
     slug: "veshalka-napolnaya-2-yashika-175x83x28-50",
     name: "Стійка-гардероб  з 2 ящиками",
     purchased: 505,
-    price: "1800 грн",
+    price: 1800,
     price_new: 900,
     discount: 50,
     icon: <BsHouseHeart />,
@@ -501,6 +509,7 @@ export const allProducts = [
   {
     id: "JZ8FJkwp",
     template: 1,
+    variant: 1,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -508,7 +517,7 @@ export const allProducts = [
     slug: "veshalka-napolnaya-3-yashika-188x41x41",
     name: "Вішалка підлогова для одягу з 3 ящиками",
     purchased: 100,
-    price: "1200 грн",
+    price: 1200,
     price_new: 720,
     discount: 40,
     icon: <BsHouseHeart />,
@@ -556,6 +565,7 @@ export const allProducts = [
   {
     id: "nC3_ohcz",
     template: 1,
+    variant: 1,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -563,7 +573,7 @@ export const allProducts = [
     slug: "foldable-horizontal-drying-rack-166x62x97",
     name: "Сушарка розкладна горизонтальна",
     purchased: 100,
-    price: "1600 грн",
+    price: 1600,
     price_new: 960,
     discount: 40,
     icon: <BsEmojiWink />,
@@ -594,6 +604,7 @@ export const allProducts = [
   {
     id: "zRSBfimg_1",
     template: 1,
+    variant: 1,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -601,7 +612,7 @@ export const allProducts = [
     slug: "foldable-vertical-drying-rack-170x126x64-40",
     name: "Багатоярусна сушарка Garment Rack With Wheels",
     purchased: 590,
-    price: "1800 грн",
+    price: 1800,
     price_new: 1080,
     discount: 40,
     icon: <BsEmojiWink />,
@@ -649,6 +660,7 @@ export const allProducts = [
   {
     id: "zRSBfimg_2",
     template: 1,
+    variant: 2,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -656,7 +668,7 @@ export const allProducts = [
     slug: "foldable-vertical-drying-rack-170x126x64-50",
     name: "Багатоярусна сушарка Garment Rack With Wheels",
     purchased: 590,
-    price: "1800 грн",
+    price: 1800,
     price_new: 900,
     discount: 50,
     icon: <BsEmojiWink />,
@@ -704,6 +716,7 @@ export const allProducts = [
   {
     id: "qI_wNXEB_1",
     template: 1,
+    variant: 1,
     category: {
       name: "Зоотовари",
       parent_id: 3,
@@ -711,8 +724,8 @@ export const allProducts = [
     slug: "ryukzak-dlya-kotiv-s-cat-36-24-40-35",
     name: "Рюкзак для котика",
     purchased: 499,
-    price: "1300 грн",
-    price_new: 845,
+    price: 1600,
+    price_new: 1040,
     discount: 35,
     icon: <FaCat />,
     call: "КОТИК ОЦІНИТЬ!",
@@ -776,6 +789,7 @@ export const allProducts = [
   {
     id: "qI_wNXEB_2",
     template: 1,
+    variant: 2,
     category: {
       name: "Зоотовари",
       parent_id: 3,
@@ -783,7 +797,7 @@ export const allProducts = [
     slug: "ryukzak-dlya-kotiv-s-cat-36-24-40-50",
     name: "Рюкзак для улюбленця",
     purchased: 499,
-    price: "1600 грн",
+    price: 1600,
     price_new: 800,
     discount: 50,
     icon: <FaCat />,

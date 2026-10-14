@@ -58,6 +58,7 @@ export default function UserForm({ item, property }) {
       },
       products: [product],
     };
+    // console.log(orderPayload);
 
     try {
       // 2. Вызываем наш Route Handler (/api/crm/route.js)
@@ -68,6 +69,7 @@ export default function UserForm({ item, property }) {
       });
 
       const result = await response.json();
+      // console.log(result);
 
       if (!response.ok) {
         throw new Error(result.error || "Ошибка при отправке");
@@ -77,6 +79,7 @@ export default function UserForm({ item, property }) {
     } catch (error) {
       alert(`Не удалось отправить заказ: ${error.message}`);
     }
+    // console.log(orderPayload);
   };
 
   return (

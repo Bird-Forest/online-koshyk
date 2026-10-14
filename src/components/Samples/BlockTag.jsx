@@ -17,7 +17,7 @@ export default function BlockTag({ item }) {
         className={styles.boxPrice}
         style={{ backgroundColor: `${item.primary}` }}
       >
-        <h3>{item.price}</h3>
+        <h3>{item.price} грн</h3>
       </div>
     </div>
   );
