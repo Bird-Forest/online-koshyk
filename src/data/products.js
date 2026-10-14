@@ -601,9 +601,9 @@ export const allProducts = [
     slug: "foldable-vertical-drying-rack-170x126x64-35",
     name: "Багатоярусна сушарка Garment Rack With Wheels",
     purchased: 590,
-    price: "1400 грн",
-    price_new: 910,
-    discount: 35,
+    price: "1800 грн",
+    price_new: 1086,
+    discount: 40,
     icon: <BsEmojiWink />,
     call: "НУ ДУЖЕ ЗРУЧНА!",
     notes: [
