@@ -33,7 +33,7 @@ export default function UserForm({ item, property }) {
     name: item.name,
     purchased_price: item.purchased,
     discount_percent: item.discount,
-    price: item.price_new,
+    price: item.price,
     quantity: 1,
     properties: [
       {

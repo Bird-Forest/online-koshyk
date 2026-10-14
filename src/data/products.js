@@ -598,7 +598,7 @@ export const allProducts = [
       name: "Меблі",
       parent_id: 2,
     },
-    slug: "foldable-vertical-drying-rack-170x126x64-35",
+    slug: "foldable-vertical-drying-rack-170x126x64-40",
     name: "Багатоярусна сушарка Garment Rack With Wheels",
     purchased: 590,
     price: "1800 грн",
