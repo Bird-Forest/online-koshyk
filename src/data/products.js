@@ -613,8 +613,8 @@ export const allProducts = [
     name: "Багатоярусна сушарка Garment Rack With Wheels",
     purchased: 590,
     price: 1800,
-    price_new: 1080,
-    discount: 40,
+    price_new: 1170,
+    discount: 35,
     icon: <BsEmojiWink />,
     call: "НУ ДУЖЕ ЗРУЧНА!",
     notes: [
