@@ -613,8 +613,8 @@ export const allProducts = [
     name: "Багатоярусна сушарка Garment Rack With Wheels",
     purchased: 590,
     price: 1800,
-    price_new: 1170,
-    discount: 35,
+    price_new: 1080,
+    discount: 40,
     icon: <BsEmojiWink />,
     call: "НУ ДУЖЕ ЗРУЧНА!",
     notes: [
@@ -725,8 +725,8 @@ export const allProducts = [
     name: "Рюкзак для котика",
     purchased: 499,
     price: 1600,
-    price_new: 1040,
-    discount: 35,
+    price_new: 960,
+    discount: 40,
     icon: <FaCat />,
     call: "КОТИК ОЦІНИТЬ!",
     notes: [
