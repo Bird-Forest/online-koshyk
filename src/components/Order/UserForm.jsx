@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./order.module.css";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -9,6 +9,7 @@ import InputRadio from "./InputRadio";
 import Spinner from "../Helper/Spinner";
 import { useRouter } from "next/navigation";
 import { nanoid } from "nanoid";
+import BlockQuantity from "../Samples/BlockQuantity";
 
 const messengers = [
   { id: 1, value: "Viber", bgClass: styles.viber },
@@ -17,7 +18,14 @@ const messengers = [
 ];
 
 export default function UserForm({ item, property }) {
+  const [quantity, setQuantity] = useState(item.quantity);
   const router = useRouter();
+
+  const handleQuantityChange = (newCount) => {
+    setQuantity(newCount);
+    console.log(newCount); // Можна відправляти дані на сервер або в стейт кошика
+  };
+
   const {
     register,
     handleSubmit,
@@ -34,7 +42,7 @@ export default function UserForm({ item, property }) {
     purchased_price: item.purchased,
     discount_percent: item.discount,
     price: item.price,
-    quantity: 1,
+    quantity: quantity,
     properties: [
       {
         name: property.name,
@@ -58,7 +66,7 @@ export default function UserForm({ item, property }) {
       },
       products: [product],
     };
-    // console.log(orderPayload);
+    console.log(orderPayload);
 
     try {
       // 2. Вызываем наш Route Handler (/api/crm/route.js)
@@ -112,6 +120,12 @@ export default function UserForm({ item, property }) {
         placeholder="Ваш номер телефону"
         register={register}
         errors={errors}
+      />
+      <BlockQuantity
+        initialValue={quantity}
+        // min={1}
+        // max={10}
+        onChange={handleQuantityChange}
       />
       <button
         type="submit"

@@ -19,6 +19,7 @@ export const allProducts = [
     price: 1200,
     price_new: 900,
     discount: 25,
+    quantity: 1,
     icon: <SlPresent />,
     call: "ЗДИВУЙ ДИТИНУ!",
     notes: [
@@ -54,6 +55,7 @@ export const allProducts = [
     price: 1200,
     price_new: 720,
     discount: 40,
+    quantity: 1,
     icon: <SlPresent />,
     call: "ЗДИВУЙ ДИТИНУ!",
     notes: [
@@ -89,6 +91,7 @@ export const allProducts = [
     price: 1000,
     price_new: 650,
     discount: 35,
+    quantity: 1,
     icon: <MdChildCare />,
     call: "ДЛЯ НАЙКРАЩОГО МАЛЮКА!",
     notes: [],
@@ -132,6 +135,7 @@ export const allProducts = [
     price: 1000,
     price_new: 650,
     discount: 35,
+    quantity: 1,
     icon: <MdChildCare />,
     call: "ДЛЯ НАЙКРАЩОГО МАЛЮКА!",
     notes: [],
@@ -226,6 +230,7 @@ export const allProducts = [
     price: 1920,
     price_new: 1152,
     discount: 40,
+    quantity: 1,
     icon: <FaThumbsUp />,
     call: "ПРОСТО НЕОБХІДНА РІЧ!",
     notes: [
@@ -291,6 +296,7 @@ export const allProducts = [
     price: 1920,
     price_new: 960,
     discount: 50,
+    quantity: 1,
     icon: <FaThumbsUp />,
     call: "ПРОСТО НЕОБХІДНА РІЧ!",
     notes: [
@@ -408,6 +414,7 @@ export const allProducts = [
     price: 1800,
     price_new: 1080,
     discount: 40,
+    quantity: 1,
     icon: <BsHouseHeart />,
     call: "ПОРЯДОК І СТИЛЬ!",
     notes: [
@@ -464,6 +471,7 @@ export const allProducts = [
     price: 1800,
     price_new: 900,
     discount: 50,
+    quantity: 1,
     icon: <BsHouseHeart />,
     call: "ПОРЯДОК І СТИЛЬ!",
     notes: [
@@ -520,6 +528,7 @@ export const allProducts = [
     price: 1200,
     price_new: 720,
     discount: 40,
+    quantity: 1,
     icon: <BsHouseHeart />,
     call: "ПОРЯДОК І СТИЛЬ!",
     notes: [
@@ -615,6 +624,7 @@ export const allProducts = [
     price: 1800,
     price_new: 1080,
     discount: 40,
+    quantity: 1,
     icon: <BsEmojiWink />,
     call: "НУ ДУЖЕ ЗРУЧНА!",
     notes: [
@@ -671,6 +681,7 @@ export const allProducts = [
     price: 1800,
     price_new: 900,
     discount: 50,
+    quantity: 1,
     icon: <BsEmojiWink />,
     call: "НУ ДУЖЕ ЗРУЧНА!",
     notes: [
@@ -727,6 +738,7 @@ export const allProducts = [
     price: 1600,
     price_new: 960,
     discount: 40,
+    quantity: 1,
     icon: <FaCat />,
     call: "КОТИК ОЦІНИТЬ!",
     notes: [
@@ -800,6 +812,7 @@ export const allProducts = [
     price: 1600,
     price_new: 800,
     discount: 50,
+    quantity: 1,
     icon: <FaCat />,
     call: "КОТИК ОЦІНИТЬ!",
     notes: [
