@@ -6,10 +6,9 @@ import Image from "next/image";
 import { FaEllipsisH } from "react-icons/fa";
 
 export default function GoodsLists() {
-  const filteProducts = allProducts.filter((item) => item.variant === 1);
   return (
     <ul className={styles.wrapList}>
-      {filteProducts.map((item) => (
+      {allProducts.map((item) => (
         <li key={item.id} className={styles.goodsItem}>
           <Image
             alt={item.name}

@@ -3,8 +3,8 @@ import React from "react";
 import { allProducts } from "@/data/products";
 import HeaderLanding from "@/components/Header/HeaderLanding";
 import NotFoundPage from "@/components/Helper/NotFoundPage";
-import SampleSecond from "@/components/Samples/SampleSecond";
-import SampleFirst from "@/components/Samples/SampleFirst";
+import SampleFirst from "@/components/Samples/1/SampleFirst";
+import SampleSecond from "@/components/Samples/2/SampleSecond";
 
 const TEMPLATES = {
   1: SampleFirst,

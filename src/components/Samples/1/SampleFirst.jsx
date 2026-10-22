@@ -1,17 +1,15 @@
 "use client";
 import React from "react";
-import styles from "./samples.module.css";
+import styles from "./sample_1.module.css";
 import { useState } from "react";
-import UserForm from "../Order/UserForm";
-import BlockTag from "./BlockTag";
-import BlockNotes from "./BlockNotes";
 import BlockSlides from "./BlockSlides";
 import BlockPrice from "./BlockPrice";
 import BlockOrder from "./BlockOrder";
 import BlockDescription from "./BlockDescription";
-import BlockImgArr from "./BlockImgArr";
-import BlockWarning from "./BlockWarning";
-import BlockDisccontImg from "./BlockDiscountImg";
+import BlockMain from "./BlockMain";
+import BlockFeatures from "./BlockFeatures";
+import BlockDiscountImg from "./BlockDiscountImg";
+import UserForm from "@/components/Order/UserForm";
 
 export default function SampleFirst({ item }) {
   const [open, setOpen] = useState(false);
@@ -44,14 +42,12 @@ export default function SampleFirst({ item }) {
   return (
     <div
       className={styles.wrapItem}
-      style={{ backgroundColor: `${item.primary}` }}
+      style={{ backgroundColor: `${item.main}` }}
     >
-      <BlockTag item={item} />
-      <BlockNotes item={item} />
-      {item.image_arr.length > 0 && <BlockImgArr item={item} />}
+      <BlockMain item={item} />
+      <BlockFeatures item={item} />
       {item.description.length > 0 && <BlockDescription item={item} />}
-      <BlockDisccontImg item={item} />
-      {item.warning && <BlockWarning item={item} />}
+      <BlockDiscountImg item={item} />
       {item.select.length > 0 && (
         <BlockSlides
           item={item}

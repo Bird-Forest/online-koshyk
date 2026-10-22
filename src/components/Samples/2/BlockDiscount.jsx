@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./samples.module.css";
+import styles from "./sample_2.module.css";
 import Image from "next/image";
 
-export default function BlockDisccontImg({ item }) {
+export default function BlockDiscount({ item }) {
   return (
-    <div className={styles.wrapNotes}>
+    <div className={styles.wrapHero}>
       <Image
         alt={item.name}
         src={item.image_notes}
@@ -13,10 +13,6 @@ export default function BlockDisccontImg({ item }) {
         loading="eager"
         className={styles.imgBasic}
       />
-      <div className={styles.discount}>
-        <h3>ЗНИЖКА</h3>
-        <p>{`${item.discount}%`}</p>
-      </div>
     </div>
   );
 }

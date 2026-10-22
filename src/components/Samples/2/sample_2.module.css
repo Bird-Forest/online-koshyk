@@ -1,0 +1,406 @@
+.wrapItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+  padding: 80px 8px 60px 8px;
+}
+.imgBasic {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  box-shadow: 0px 0px 6px 2px rgba(42, 48, 53, 0.6);
+}
+/** BlockHero **/
+.wrapHero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+.tagPrice {
+  right: 0;
+  bottom: 140px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-montserrat);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 1.25;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  text-shadow:
+    -1px -1px 1px rgba(255, 255, 255, 0.1),
+    1px 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 12px 16px 12px 24px;
+}
+
+/** BlockProperty **/
+.wrapProperty {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 24px;
+}
+.btnProp {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 60px;
+  border-radius: 24px;
+  font-family: var(--font-caveat);
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1.25;
+  padding-bottom: 6px;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.btnProp > svg {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+}
+.on {
+  display: block;
+  transition: 0.2s all linear;
+}
+.off {
+  display: none;
+  transition: 0.2s all linear;
+}
+.listProp {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0 8px;
+  transition: 0.2s all linear;
+}
+
+.itemProp {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: var(--font-manrope);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.1;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 12px;
+}
+/** BlockPhoto **/
+.wrapPhoto {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+.caseBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+.btnIcon {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border: none;
+  outline: none;
+  width: 50%;
+  height: 40px;
+}
+.btnIcon > svg {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+}
+
+/** BlockPrice **/
+.casePrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  gap: 8px;
+  font-family: var(--font-montserrat);
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 1.1;
+  font-weight: 600;
+}
+.wrapPrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  gap: 8px;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 16px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-montserrat);
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 1.2;
+  font-weight: 800;
+  text-shadow:
+    -1px -1px 1px rgba(255, 255, 255, 0.1),
+    1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.subTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-montserrat);
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 1.1;
+  font-weight: 600;
+}
+/** BlockSelect **/
+.wrapSelect {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+  font-family: var(--font-montserrat);
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 1.25;
+  font-weight: 800;
+  text-shadow:
+    -1px -1px 1px rgba(255, 255, 255, 0.1),
+    1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.wrapSelect > h4 {
+  width: 280px;
+}
+.listRadio {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+}
+.wrapInput {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.wrapInput > svg {
+  width: 36px;
+  height: 36px;
+  fill: currentColor;
+}
+.input {
+  position: absolute;
+  appearance: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-size: cover;
+  outline: none;
+  cursor: pointer;
+}
+.input:checked {
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.listImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  list-style: none;
+}
+/** BlockPresent **/
+.listPresent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  height: auto;
+  list-style: none;
+}
+.wrapPresent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selectPresent {
+  top: -20px;
+  right: -20px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+.selectPresent > svg {
+  width: 36px;
+  height: 36px;
+  fill: currentColor;
+}
+.inputPresent {
+  position: absolute;
+  appearance: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-size: cover;
+  outline: none;
+  cursor: pointer;
+}
+.inputPresent:checked {
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/** BlockUserOrder **/
+.wrapUserOrder {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+.titleUserOrder {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 90%;
+  height: 60px;
+  border-radius: 24px;
+  font-family: var(--font-caveat);
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 1.25;
+  font-weight: 700;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.titleUserOrder > svg {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+  margin-top: 8px;
+}
+.textUserOrder {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 12px;
+}
+.textUserOrder > h6 {
+  font-family: var(--font-manrope);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1.25;
+}
+.textUserOrder > p {
+  font-family: var(--font-manrope);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.1;
+}
+.wrapCall {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  gap: 10px;
+}
+.iconCall {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 40px;
+  font-size: 40px;
+  fill: currentColor;
+}
+.textCall {
+  font-family: var(--font-caveat);
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 1.25;
+  font-weight: 700;
+}
+.btnOrder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 60px;
+  border-radius: 24px;
+  font-family: var(--font-montserrat);
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1.25;
+  text-shadow:
+    -1px -1px 1px rgba(255, 255, 255, 0.1),
+    1px 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}

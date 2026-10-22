@@ -7,7 +7,7 @@
   max-width: 100%;
   height: auto;
   gap: 16px;
-  padding: 40px 4px;
+  padding: 0px 4px 60px 4px;
 }
 
 .boxInput {
@@ -27,7 +27,7 @@
   height: 40px;
   border-radius: 6px;
   background-color: white;
-  color: black;
+  color: rgb(33, 32, 32);
   font-family: var(--font-montserrat);
   font-size: 18px;
   font-weight: 500;
@@ -39,11 +39,13 @@
 
 .titleBox {
   font-family: var(--font-montserrat);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   letter-spacing: 1.25;
-  color: white;
   padding-bottom: 8px;
+  text-shadow:
+    -1px -1px 1px rgba(255, 255, 255, 0.1),
+    1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .listRadio {
@@ -90,10 +92,10 @@
 
 .error {
   height: 18px;
-  font-family: var(--font-open-sans);
+  font-family: var(--font-manrope);
   letter-spacing: 1.25;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 800;
   color: #a02803;
 }
 .btnSubmit {
@@ -101,18 +103,22 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 48px;
-  background-color: white;
+  height: 52px;
+  border-radius: 24px;
   font-family: var(--font-montserrat);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 1.5;
-  border-radius: 20px;
+  letter-spacing: 1.25;
   outline: transparent;
-  border: 2px solid white;
   transition: transform 0.3s ease;
-  cursor: pointer;
+  text-shadow:
+    -1px -1px 1px rgba(255, 255, 255, 0.1),
+    1px 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .btnSubmit:hover {
   /* Увеличивает кнопку на 10% (1.1 от исходного размера) */

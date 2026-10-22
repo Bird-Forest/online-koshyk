@@ -9,7 +9,7 @@ import InputRadio from "./InputRadio";
 import Spinner from "../Helper/Spinner";
 import { useRouter } from "next/navigation";
 import { nanoid } from "nanoid";
-import BlockQuantity from "../Samples/BlockQuantity";
+// import BlockQuantity from "../Samples/1/BlockQuantity";
 
 const messengers = [
   { id: 1, value: "Viber", bgClass: styles.viber },
@@ -17,14 +17,18 @@ const messengers = [
   { id: 1, value: " Whatsapp", bgClass: styles.whatsapp },
 ];
 
-export default function UserForm({ item, property }) {
-  const [quantity, setQuantity] = useState(item.quantity);
+export default function UserForm({ item, property, present }) {
+  // const [quantity, setQuantity] = useState(item.quantity);
   const router = useRouter();
 
-  const handleQuantityChange = (newCount) => {
-    setQuantity(newCount);
-    console.log(newCount); // Можна відправляти дані на сервер або в стейт кошика
+  const btnBox = {
+    color: `${item.main}`,
+    backgroundColor: `${item.secondary}`,
+    border: `1px solid ${item.secondary}`,
   };
+  // const handleQuantityChange = (newCount) => {
+  //   setQuantity(newCount);
+  // };
 
   const {
     register,
@@ -42,7 +46,7 @@ export default function UserForm({ item, property }) {
     purchased_price: item.purchased,
     discount_percent: item.discount,
     price: item.price,
-    quantity: quantity,
+    quantity: item.quantity,
     properties: [
       {
         name: property.name,
@@ -64,9 +68,9 @@ export default function UserForm({ item, property }) {
       marketing: {
         utm_term: "landing page",
       },
-      products: [product],
+      products: [product, present],
     };
-    console.log(orderPayload);
+    // console.log(orderPayload);
 
     try {
       // 2. Вызываем наш Route Handler (/api/crm/route.js)
@@ -100,6 +104,7 @@ export default function UserForm({ item, property }) {
         type="radio"
         name="messenger"
         arr={messengers}
+        item={item}
         register={register}
         errors={errors}
       />
@@ -121,17 +126,7 @@ export default function UserForm({ item, property }) {
         register={register}
         errors={errors}
       />
-      <BlockQuantity
-        initialValue={quantity}
-        // min={1}
-        // max={10}
-        onChange={handleQuantityChange}
-      />
-      <button
-        type="submit"
-        className={styles.btnSubmit}
-        style={{ color: `${item.primary}` }}
-      >
+      <button type="submit" className={styles.btnSubmit} style={btnBox}>
         {isSubmitting ? <Spinner /> : "Я це хочу"}
       </button>
     </form>

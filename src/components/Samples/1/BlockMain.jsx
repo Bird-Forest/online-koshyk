@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./samples.module.css";
+import styles from "./sample_1.module.css";
 import Image from "next/image";
 
-export default function BlockTag({ item }) {
+export default function BlockMain({ item }) {
   return (
-    <div className={styles.wrapImg}>
+    <div className={styles.wrapMain}>
       <Image
         alt={item.name}
         src={item.image_tag}
@@ -15,7 +15,7 @@ export default function BlockTag({ item }) {
       />
       <div
         className={styles.boxPrice}
-        style={{ backgroundColor: `${item.primary}` }}
+        style={{ backgroundColor: `${item.main}` }}
       >
         <h3>{item.price} грн</h3>
       </div>

@@ -2,10 +2,19 @@
 import React from "react";
 import styles from "./order.module.css";
 
-export default function InputRadio({ type, name, arr, register, errors }) {
+export default function InputRadio({
+  type,
+  name,
+  arr,
+  register,
+  errors,
+  item,
+}) {
   return (
     <div className={styles.boxInput}>
-      <p className={styles.titleBox}>оберіть спосіб звʼязку </p>
+      <p className={styles.titleBox} style={{ color: `${item.primary}` }}>
+        оберіть спосіб звʼязку{" "}
+      </p>
       <ul className={styles.listRadio}>
         {arr.map((el, i) => (
           <li key={i} className={styles.itemRadio}>

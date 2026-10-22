@@ -1,4 +1,4 @@
-import { Montserrat, Open_Sans } from "next/font/google";
+import { Montserrat, Manrope, Open_Sans, Caveat } from "next/font/google";
 import "./globals.css";
 import MetaPixel from "@/components/Meta/MetaPixel";
 
@@ -6,15 +6,21 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["cyrillic"],
 });
-
-const openSans = Open_Sans({
-  variable: "--font-open-sans",
-  subsets: ["latin"],
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["cyrillic"],
+});
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["cyrillic"],
 });
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="uk" className={`${montserrat.variable} ${openSans.variable}`}>
+    <html
+      lang="uk"
+      className={`${montserrat.variable} ${manrope.variable} ${caveat.variable}`}
+    >
       <MetaPixel />
       <body>{children}</body>
     </html>

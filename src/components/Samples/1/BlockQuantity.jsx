@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./samples.module.css";
+import styles from "./sample_1.module.css";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 
