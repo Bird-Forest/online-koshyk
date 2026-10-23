@@ -9,7 +9,6 @@ import InputRadio from "./InputRadio";
 import Spinner from "../Helper/Spinner";
 import { useRouter } from "next/navigation";
 import { nanoid } from "nanoid";
-// import BlockQuantity from "../Samples/1/BlockQuantity";
 
 const messengers = [
   { id: 1, value: "Viber", bgClass: styles.viber },
