@@ -26,7 +26,6 @@ export default async function ProduktPage({ params }) {
         <section className={styles.landing}>
           <HeaderLanding />
           <TemplateComponent item={product} />
-          {/* <SampleFirst item={product} /> */}
         </section>
       ) : (
         <NotFoundPage />

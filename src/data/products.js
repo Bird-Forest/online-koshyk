@@ -18,6 +18,7 @@ export const allProducts = [
   {
     id: "zRSBfimg",
     template: 1,
+    current: false,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -100,6 +101,7 @@ export const allProducts = [
   {
     id: "DlQRY6tO",
     template: 1,
+    current: false,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -161,6 +163,7 @@ export const allProducts = [
   {
     id: "CZPs8m5E",
     template: 1,
+    current: false,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -219,6 +222,7 @@ export const allProducts = [
   {
     id: "uxtmXmKn",
     template: 1,
+    current: false,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -268,6 +272,7 @@ export const allProducts = [
   {
     id: "JZ8FJkwp",
     template: 1,
+    current: false,
     category: {
       name: "Меблі",
       parent_id: 2,
@@ -317,6 +322,7 @@ export const allProducts = [
   {
     id: "qI_wNXEB",
     template: 2,
+    current: true,
     category: {
       name: "Зоотовари",
       parent_id: 3,
