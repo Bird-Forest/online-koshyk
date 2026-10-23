@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "./goods.module.css";
 import { allProducts } from "@/data/products";
-import Image from "next/image";
-import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa6";
+import CurrentProduct from "./CurrentProduct";
 
 export default function HomePage() {
   const item = allProducts.find((item) => item.current === true);
@@ -22,24 +20,9 @@ export default function HomePage() {
           пропонуємо їх у нашому каталозі. Вам залишається лише найприємніше —
           обрати найкраще для себе!
         </p>
-        <h3>Актуальний товар</h3>
+        <h2>Актуальний товар</h2>
       </div>
-
-      <div className={styles.goodsItem}>
-        <p className={styles.titleItem}>{item.name}</p>
-        <Image
-          alt={item.name}
-          src={item.image_tag}
-          width={480}
-          height={480}
-          loading="eager"
-          className={styles.img}
-        />
-        <Link href={`/${item.slug}`} className={styles.more}>
-          Переглянути товар
-          <FaArrowRight />
-        </Link>
-      </div>
+      <CurrentProduct item={item} />
     </div>
   );
 }
